@@ -206,16 +206,16 @@ print(f"El costo total de la cena es de: {costo_total}")
 # Finalmente, mostrar la fecha en formato dd/mm/aaaa.
 dia = int(input("Ingresa el dia de tu nacimiento: "))
 mes = int(input("Ingresa el mes de tu nacimiento: "))
-año = int(input("Ingresa el año de tu nacimiento: "))
+anio = int(input("Ingresa el año de tu nacimiento: "))
 
-print(f"La fecha de nacimiento del usuario es: {dia}/{mes}/{año}")
+print(f"La fecha de nacimiento del usuario es: {dia}/{mes}/{anio}")
 
 #20 Hacer otra versión del programa, pero esta vez almacenado todo en una única variable con formato DDMMAAA.
 fecha_nacimiento = input("Ingresa tu fecha de nacimiento en formato DDMMAAA: ")
 dia = fecha_nacimiento[0:2]
 mes = fecha_nacimiento[2:4]
-año = fecha_nacimiento[4:8]
-print(f"La fecha de nacimiento del usuario es: {dia}/{mes}/{año}")
+anio2 = fecha_nacimiento[4:8]
+print(f"La fecha de nacimiento del usuario es: {dia}/{mes}/{anio2}")
 
 #21 Una pareja de motociclistas necesita hacer ciertos cálculos antes de emprender un viaje en moto, para saber cuántos tanques de combustible consumirá el viaje entero.
 # Para eso deben ingresar: cuántos kilómetros puede recorrer su moto con 1 litro de combustible, qué capacidad (en litros) tiene el tanque y cuántos kilómetros en total recorrerán.
