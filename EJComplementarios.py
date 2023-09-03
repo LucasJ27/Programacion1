@@ -5,7 +5,7 @@
 
 numero_1 = 10
 print(numero_1)
-numero_2 = 20
+numero_2 = 2.0
 print(numero_2)
 suma = numero_1 + numero_2
 resta = numero_1 - numero_2
