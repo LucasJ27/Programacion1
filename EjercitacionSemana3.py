@@ -20,7 +20,7 @@ elif dia_semana == "viernes" and (dia_numero == 1 and (mes_numero == 1 or mes_nu
         cantidad_alumnos = int(input("Ingrese la cantidad de nuevos alumnos: ")) 
         arancel_alumno = int(input("Ingrese el arancel por cada alumno: "))
         total_arancel = cantidad_alumnos * arancel_alumno
-        print(f"El ingreso total sera de: ${total_arancel}")
+        print(f"El ingreso total sera de: ${total_arancel} ")
 else:
     print("Se produjo un error")
         
