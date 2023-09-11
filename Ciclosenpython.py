@@ -38,17 +38,17 @@ print(f"El msj cifrado es: {msj_cifrado}")
 # Por cada número, informar cuántos dígitos pares y cuántos impares tiene.
 # Al finalizar, informar la cantidad de dígitos pares y de dígitos impares leídos en total.
 
-num=1
 digitos_pares=0
 digitos_impares=0
-
-while num != 0:
-    num=int(input("Ingrese un numero entero positivo: ")) 
-    if num != 0:
-        if num % 2 == 0:
-            digitos_pares+=1
-        else:
-            digitos_impares+=1
-    else:
+while True:
+    num=int(input("Ingrese un numero entero positivo (o ingrese 0 para salir): ")) 
+    if num == 0:
         break
-print(f"La cantidad de dígitos pares son {digitos_pares} y los digitos impares son {digitos_impares}")    
+    for i in range(1,num+1):
+        if i % 2 == 0:
+            digitos_pares+=1
+            
+        else:
+           digitos_impares+=1
+print(f"La cantidad de dígitos pares que contiene el numero ingresado son {digitos_pares}")
+print(f"La cantidad de dígitos impares que contiene el numero ingresado son {digitos_impares}")     
