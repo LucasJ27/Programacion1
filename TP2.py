@@ -3,7 +3,7 @@ import math
 #1 Crear un programa que reciba el número de años que tiene nuestra computadora y muestre en la consola que el computador es nuevo si es menor o igual a 2 años
 #y que el computador es viejo si es mayor a 2 años.
 #2 Hacer que el programa anterior muestre un mensaje de error si el usuario digita un número negativo.
-anios = int(input("Ingrese los años de su computadora: "))
+anios = int(input("Ingrese los años de su computadora: ")).lower()
 
 if anios <= 2 and anios >= 0:
     print("Su computadora es nueva")
@@ -32,11 +32,11 @@ candidato_B = "verde"
 candidato_C = "azul"
 candidato = input("Ingrese el candidato que desea votar: \nCandidato A\nCandidato B\nCandidato C").lower()
 
-if candidato == "Candidato A":
+if candidato == "candidato a":
     print(f"Usted ha votado por el partido {candidato_A}")
-elif candidato == "Candidato B":
+elif candidato == "candidato b":
     print(f"Usted ha votado por el partido {candidato_B}")
-elif candidato == "Candidato C":
+elif candidato == "candidato c":
     print(f"Usted ha votado por el partido {candidato_C}")
 else:
     print("Opcion errónea.")
@@ -44,7 +44,7 @@ else:
 #5 Escribir un programa que solicite al usuario una letra, si es una vocal, mostrar el mensaje ‘Es vocal’.
 # Se debe validar que el usuario ingrese sólo un carácter. Si ingresa un string de más de un carácter, informarle que no se puede procesar el dato.
 
-letra = input("Ingrese una letra: ")
+letra = input("Ingrese una letra: ").lower()
 
 if letra == "a" or letra == "e" or letra == "i" or letra == "o" or letra == "u":
     print("Es vocal")
@@ -55,14 +55,14 @@ elif len(letra) > 1:
 
 aniobi = int(input("Ingrese un año: "))
 
-if (aniobi%4 == 0) and (aniobi%100 != 0) or (aniobi%400 != 0):
+if (aniobi%4 == 0 and aniobi%100 != 0) or (aniobi%400 == 0):
     print("El año es bisiesto")
 else:
     print("El año no es bisiesto")
 
 #7 Escribí un programa para solicitar al usuario tres números y mostrar en pantalla al menor de los tres.
 
-numero_uno = input("Ingrese el primero numero: ")
+numero_uno = input("Ingrese el primer numero: ")
 numero_dos = input("Ingrese el segundo numero: ")
 numero_tres = input("Ingrese el tercer numero: ")
 
@@ -76,8 +76,8 @@ elif (numero_tres < numero_uno) and (numero_tres < numero_dos):
 #8 Escribí un programa que solicite ingresar un nombre de usuario y una contraseña. Si el nombre es “Gwenevere” y la contraseña es “excalibur”, mostrar en pantalla “Usuario y contraseña correctos.
 #Puede ingresar a Camelot”. Si el nombre o la contraseña no coinciden, mostrar “Acceso denegado”.
 
-usuario = input("Ingrese su usuario: ")
-contraseña = input("Ingrese su contraseña: ")
+usuario = input("Ingrese su usuario: ").lower()
+contraseña = input("Ingrese su contraseña: ").lower()
 
 if (usuario == "Gwenevere") and (contraseña == "excalibur"):
     print("Usuario y contraseña correctos. Puede ingresar a Camelot")
@@ -161,10 +161,14 @@ numero_2 = int(input("Ingrese el segundo numero: "))
 
 if (numero_1 > numero_2) and (numero_1 % numero_2 == 0):
     print(f"{numero_1} es multiplo de {numero_2}")
+elif (numero_2 > numero_1) and (numero_2 % numero_1 == 0):
+    print(f"{numero_2} es multiplo de {numero_1}")
+elif (numero_1 > numero_2) and (numero_1 % numero_2 != 0):
+    print(f"El {numero_1} no es multiplo de {numero_2}")
+elif (numero_2 > numero_1) and (numero_2 % numero_1 != 0):
+    print(f"El {numero_2} no es multiplo de {numero_1}")
 elif (numero_1 < 1 or numero_2 < 1):
     print("Uno o los dos numeros ingresados son negativos o nulos")
-else:
-    print(f"El {numero_1} no es multiplo de {numero_2}")
 
 #14 Escriba un programa que pida los coeficientes de una ecuación de primer grado (a x + b = 0) y escriba la solución.
 # Se recuerda que una ecuación de primer grado puede no tener solución, tener una solución única, o que todos los números sean solución. Se recuerda que la fórmula de las soluciones es 
