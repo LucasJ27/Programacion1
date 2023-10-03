@@ -27,7 +27,7 @@ print("Los numeros impares de la lista son: " + ", ".join(numbers))
 
 number3 = int(input("Ingrese un numero entero positivo: "))
 countdown = []
-for i in range(1, num +1):
+for i in range(1, number3 +1):
     countdown.append(str(i))
 countdown.reverse()
 print(", ".join(countdown))
@@ -265,7 +265,7 @@ if number < 0:
 else:
     factorial = 1
     
-    for i in range(1, numero + 1):
+    for i in range(1, number + 1):
         factorial *= i
 
     print(f"El factorial de {number} es {factorial}")
