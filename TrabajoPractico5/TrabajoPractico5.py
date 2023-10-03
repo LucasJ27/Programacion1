@@ -18,7 +18,7 @@ from FuncionesTP5 import frequency
 from FuncionesTP5 import final_function
 from FuncionesTP5 import factorial_max
 
-'''
+
 #--- Punto 1 ---
 dni = int(input("Ingrese su numero de dni: "))
 print(validate_dni(dni))
@@ -134,7 +134,7 @@ number = int(input("Ingrese un numero: "))
 digits = int(input("Ingrese un digito (del 0 al 9): "))
 print(frequency(number,digits))
 
-'''
+
 
 #--- Punto 17 ---
 numbers = []
