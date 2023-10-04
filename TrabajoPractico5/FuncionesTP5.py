@@ -15,7 +15,8 @@ def validate_dni(number_dni):
 
 def last_word(word):
     word_split = word.split()
-
+    if not word_split:
+        return 0
     return len(word_split[-1])
 
 #3.	Escribir un programa que permita al usuario obtener un identificador para cada uno de los socios de un club. Para eso ingresará nombre completo y número de DNI de cada socio,
@@ -41,6 +42,8 @@ def ID_club(name, last_name, DNI):
 
 #4.	Crea un programa que pida dos número enteros al usuario y diga si alguno de ellos es múltiplo del otro. Crea una función que reciba los dos números, y devuelve si el primero es múltiplo del segundo. 
 def is_multiple(number, number2):
+    if number2 == 0:
+        return False
     if number % number2 == 0:
         return True 
     else:
@@ -61,7 +64,7 @@ def text_function(text):
     letters = []
     for letter in text:
         # Agregar un espacio solo después de las letras
-        if letter.isalpha():
+        if letter.isalpha() or letter.isdigit():
             letters.append(letter + " ")
         else:
             # Mantener los símbolos sin espacio adicional
@@ -73,6 +76,9 @@ def text_function(text):
 # Crea un programa que pida números por teclado y muestre el máximo y el mínimo, utilizando la función anterior.
 
 def get_max_min(numbers):
+    if not numbers:
+        return None, None
+
     max_number = max(numbers)
     min_number = min(numbers)
 
@@ -93,8 +99,8 @@ def login(user,password):
     if user == "usuario1" and password == "asdasd":
         return True
     else:
-        print("Usuario o contraseña incorrectos, vuelva a intentarlo")
-
+        return False
+    
 #10. Escribir una función que aplique un descuento a un precio.
 # Esta función tiene que recibir un diccionario con los precios y porcentajes del carrito de compra, aplicar los descuentos a los productos del carrito y devolver el precio final de la compra.
  

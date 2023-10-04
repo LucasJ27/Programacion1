@@ -44,10 +44,17 @@ while True:
          
 
 #--- Punto 4 ---
-   
-number = int(input("Ingresa el primer numero: "))
-number_2 = int(input("Ingresa el segundo numero: "))
-print(is_multiple(number,number_2))
+while True:   
+    number = int(input("Ingresa el primer numero: "))
+    if number == 0:
+        print("El numero debe ser mayor a 0")
+        break
+    number_2 = int(input("Ingresa el segundo numero: "))
+    if number_2 == 0:
+        print("El divisor no puede ser 0")
+        break
+    print(is_multiple(number,number_2))
+    break
 
 #--- Punto 5 ---
 days = int(input("Ingrese con un numero la cantidad de dias: "))
@@ -147,4 +154,3 @@ while True:
     print(f"La suma de los digitos del numero primo ingresado es: {final_function(number, digit)}")
     print(f"En el numero {number}, el digito {digit} aparece {frequency(number,digit)} veces")
 print(f"El mayor numero primo ingresado es: {max(numbers)} y su factorial es: {factorial_max(max(numbers))}")
-    
