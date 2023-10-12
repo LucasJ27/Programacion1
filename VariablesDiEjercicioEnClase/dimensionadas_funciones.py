@@ -27,11 +27,27 @@ def comprasClientes(compras):
     facturas = set()
 
     for compra in compras:
-        
         facturas.add(compra[3])
-
-    
     return list(facturas)
+
+def cargar_socio(socios,numero, nombre, ingreso, cuota_al_dia):
+    socios[numero] = {'nombre': nombre, 'ingreso': ingreso, 'cuota_al_dia': cuota_al_dia}
+
+def pagar_cuota(socio_numero,socios):
+    if socio_numero in socios:
+        socios[socio_numero]["cuota_al_dia"] = True
+        print(f"El socio Nº{socio_numero} ha pagado todas las cuotas adeudadas.")
+    else:
+        print("Número de socio no válido.")
+
+def modificar_fecha_ingreso(socios,fecha_antigua, nueva_fecha):
+    for numero, datos in socios.items():
+        if datos["ingreso"] == fecha_antigua:
+            socios[numero]["ingreso"] = nueva_fecha
+# Iterar sobre todos los socios y corregir la fecha de ingreso si es el 13/03/2018
+#for numero, socio in socios.items():
+#    if socio['ingreso'] == '13032018':
+#        socio['ingreso'] = corregir_fecha_ingreso(socio['ingreso'])
 
 
 
