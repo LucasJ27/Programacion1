@@ -1,23 +1,5 @@
 import math
-from FuncionesTP5 import validate_dni
-from FuncionesTP5 import last_word
-from FuncionesTP5 import ID_club
-from FuncionesTP5 import is_multiple
-from FuncionesTP5 import temperature
-from FuncionesTP5 import text_function
-from FuncionesTP5 import get_max_min
-from FuncionesTP5 import area_perimeter
-from FuncionesTP5 import login
-from FuncionesTP5 import apply_function
-from FuncionesTP5 import duplicate
-from FuncionesTP5 import phrase_dict
-from FuncionesTP5 import vector
-from FuncionesTP5 import prime_number
-from FuncionesTP5 import factorial
-from FuncionesTP5 import frequency
-from FuncionesTP5 import final_function
-from FuncionesTP5 import factorial_max
-
+from FuncionesTP5 import validate_dni, last_word, ID_club, is_multiple, temperature, text_function, get_max_min, area_perimeter, login, apply_function, duplicate, phrase_dict, vector, prime_number, factorial, frequency, final_function, factorial_max
 
 #--- Punto 1 ---
 dni = int(input("Ingrese su numero de dni: "))

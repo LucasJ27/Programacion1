@@ -1,14 +1,5 @@
 import pytest
-from FuncionesTP5 import validate_dni
-from FuncionesTP5 import last_word
-from FuncionesTP5 import ID_club
-from FuncionesTP5 import is_multiple
-from FuncionesTP5 import temperature
-from FuncionesTP5 import text_function
-from FuncionesTP5 import get_max_min
-from FuncionesTP5 import area_perimeter
-from FuncionesTP5 import login
-from FuncionesTP5 import phrase_dict
+from FuncionesTP5 import validate_dni, last_word, ID_club, is_multiple, temperature, text_function, get_max_min, area_perimeter, login, phrase_dict
 
 @pytest.mark.parametrize("input,res", [
 (38756526, True),
