@@ -44,10 +44,7 @@ def modificar_fecha_ingreso(socios,fecha_antigua, nueva_fecha):
     for numero, datos in socios.items():
         if datos["ingreso"] == fecha_antigua:
             socios[numero]["ingreso"] = nueva_fecha
-# Iterar sobre todos los socios y corregir la fecha de ingreso si es el 13/03/2018
-#for numero, socio in socios.items():
-#    if socio['ingreso'] == '13032018':
-#        socio['ingreso'] = corregir_fecha_ingreso(socio['ingreso'])
+
 
 
 
