@@ -21,9 +21,9 @@ while True:
         break
     words.append(entrada2)
     
-print("Lista antes del ordenamiento burbuja:", words)
+print("Lista antes del ordenamiento por seleccion:", words)
 ordenamiento_por_seleccion(words)
-print("Lista después del ordenamiento burbuja:", words)
+print("Lista después del ordenamiento por seleccion:", words)
 
 #3.	Crea una lista de diccionarios, donde cada diccionario contiene información sobre un libro (título, autor, año de publicación, etc.).
 # Luego, escribe un programa que ordene la lista de libros en función de un campo específico, como el año de publicación o el autor.
