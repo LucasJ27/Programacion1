@@ -1,3 +1,4 @@
+import random
 '''
 
 Escribir una función que simule el siguiente experimento: Se tiene una rata en una 
@@ -10,23 +11,19 @@ La función debe devolver el tiempo que tarda la rata en salir de la jaula.
 
 '''
 
-def jaula():
-    contador = 0
-    while True:
-        camino = int(input("Elija el camino para la rata (ingrese 0 para salir): \n1- Camino 1 \n2- Camino 2 \n3- Camino 3 "))
-        if camino == 0:
-            break  
-        elif camino == 1:
-            contador += 3
-        elif camino == 2:
-            contador += 5
-        elif camino == 3:
-            contador += 7
-            break  
-
-    return f"La rata se demoró {contador} minutos en salir de la jaula"
-        
-
+def jaula(contador = 0):
+    camino = random.randint(1, 3)
+    if camino == 1:
+        print("La rata tomó el camino 1 y luego de 3 minutos volvió al mismo lugar donde empezó.")
+        contador += 3
+    elif camino == 2:
+        print("La rata tomó el camino 2 y luego de 5 minutos volvió al mismo lugar donde empezó.")
+        contador += 5
+    elif camino == 3:
+        contador += 7
+        return print(f"La rata tomó el camino 3 y luego de 7 minutos salió de la jaula. Se tardo {contador} minutos en salir de la jaula.") # Caso base: la rata ha salido de la jaula
+    return jaula(contador)  # Llamada recursiva
+       
 def f(n):
     s = str(n)
     if len(s) <= 1:
