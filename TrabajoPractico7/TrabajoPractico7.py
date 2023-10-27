@@ -51,10 +51,8 @@ lista_de_libros = [
     }
 ]
 
-# Ordenar por año de publicación
 lista_anio = sorted(lista_de_libros, key=lambda x: x['año_de_publicación'])
 
-# Mostrar la lista ordenada
 for libro in lista_anio:
     print(f'Título: {libro["título"]}, Autor: {libro["autor"]}, Año de publicación: {libro["año_de_publicación"]}')
 
@@ -95,25 +93,21 @@ print("Lista después del ordenamiento por conteo: ", lista)
 
 num_words= ["Hola", "Mundo", "Python",3,2,1]
 
-# Inicializa listas vacías para los números y las cadenas
 numeros = []
 cadenas = []
 
-# Separa los números de las cadenas usando bucles for
 for elemento in num_words:
     if isinstance(elemento, int):
         numeros.append(elemento)
     elif isinstance(elemento, str):
         cadenas.append(elemento)
-#Ordenamos los numeros
+
 numeros.sort()
-# Ordenamos las cadenas
+
 cadenas.sort()
 
-# Combina las listas ordenadas, primero los números y luego las cadenas
 resultado = numeros + cadenas
 
-# Imprime la lista resultante
 print(resultado)
 
 #8.	Implementa el algoritmo de ordenamiento Merge Sort y úsalo para ordenar una lista de números.

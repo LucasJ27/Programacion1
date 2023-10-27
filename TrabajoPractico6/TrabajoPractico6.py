@@ -252,15 +252,12 @@ def obtener_diagonales(matriz):
         print("La matriz no es cuadrada.")
         return None, None
 
-    # Diagonal principal
     diagonal_principal = [matriz[i][i] for i in range(len(matriz))]
 
-    # Diagonal inversa
     diagonal_inversa = [matriz[i][len(matriz) - 1 - i] for i in range(len(matriz))]
 
     return diagonal_principal, diagonal_inversa
 
-# Ejemplo de uso
 matriz_ejemplo = [
     [1, 2, 3],
     [4, 5, 6],

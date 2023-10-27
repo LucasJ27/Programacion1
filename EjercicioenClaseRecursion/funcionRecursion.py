@@ -21,8 +21,8 @@ def jaula(contador = 0):
         contador += 5
     elif camino == 3:
         contador += 7
-        return print(f"La rata tomó el camino 3 y luego de 7 minutos salió de la jaula. Se tardo {contador} minutos en salir de la jaula.") # Caso base: la rata ha salido de la jaula
-    return jaula(contador)  # Llamada recursiva
+        return print(f"La rata tomó el camino 3 y luego de 7 minutos salió de la jaula. Se tardo {contador} minutos en salir de la jaula.")
+    return jaula(contador)
        
 def f(n):
     s = str(n)

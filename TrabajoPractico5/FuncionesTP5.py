@@ -63,11 +63,9 @@ def temperature(temp_max, temp_min):
 def text_function(text):
     letters = []
     for letter in text:
-        # Agregar un espacio solo después de las letras
         if letter.isalpha() or letter.isdigit():
             letters.append(letter + " ")
         else:
-            # Mantener los símbolos sin espacio adicional
             letters.append(letter)
 
     return "".join(letters)
