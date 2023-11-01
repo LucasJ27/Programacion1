@@ -15,11 +15,11 @@ def create_board():
     bingo_board = []
     x=0
     for i in range(5):
-        fila = []
+        row = []
         for j in range(5):
-            fila.append(unique_num[x])
+            row.append(unique_num[x])
             x += 1
-        bingo_board.append(fila)
+        bingo_board.append(row)
     return bingo_board
 
 def play_bingo(board):
