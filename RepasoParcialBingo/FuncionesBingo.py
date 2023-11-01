@@ -34,7 +34,7 @@ def play_bingo(board):
                     print(f"Numero encontrado!: {balls}")
                     row[row.index(balls)] = "X"  
                     break
-            if check_diagonal(board):
+            if check_bingo(board):
                 print("¡BINGO! Has completado una línea en tu cartón")
                 for row in board:
                     for element in row:
@@ -42,7 +42,7 @@ def play_bingo(board):
                     print()
                 break
 
-def check_diagonal(board):
+def check_bingo(board):
     
     for row in board:
         full_row = True
